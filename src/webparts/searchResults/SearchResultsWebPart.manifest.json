@@ -1,0 +1,22 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "7c846ebb-55f4-4fce-93aa-99617fb68f25",
+  "alias": "SearchResultsWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f71", 
+    "group": { "default": "検索" },
+    "title": { "default": "検索結果" },
+    "description": { "default": "検索結果です。" },
+    "officeFabricIconFontName": "Source",
+    "properties": {
+      "description": "SearchResults"
+    }
+  }]
+}
