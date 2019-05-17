@@ -2,7 +2,6 @@ import * as React from 'react';
 import styles from './SearchText.module.scss';
 import { ISearchTextProps } from './ISearchTextProps';
 import { ISearchTextStates } from './ISearchTextStates';
-import { escape } from '@microsoft/sp-lodash-subset';
 import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
 import queryUtil from '../../../util/queryUtil';
 
@@ -14,7 +13,10 @@ export default class SearchText extends React.Component<ISearchTextProps, ISearc
   {
     super(props);
 
+    let query = new queryUtil().get().hashes['query'];
+
     this.state = {
+      query : (query)? query : ''
     };
   }
 
@@ -40,6 +42,7 @@ export default class SearchText extends React.Component<ISearchTextProps, ISearc
       <SearchBox
         placeholder='検索'
         onSearch={this.onSearch}
+        value={this.state.query}
         />
     );
   }
