@@ -2,27 +2,30 @@ import * as React from 'react';
 import styles from './SearchResults.module.scss';
 import { ISearchResultsProps } from './ISearchResultsProps';
 import { ISearchResultsStates } from './ISearchResultsStates';
-import queryUtil from '../../../util/queryUtil';
+import CardLayout from './CardLayout/CardLayout';
 
 /** 検索結果コントロール */
 export default class SearchResults extends React.Component<ISearchResultsProps, ISearchResultsStates> {
 
-  /** 検索結果初期化 */
+  /** 検索結果コントロール初期化 */
   constructor(props : ISearchResultsProps)
   {
     super(props);
 
-    let query = new queryUtil().get().hashes['query'];
-
     this.state = {
-      query : (query)? query : ''
     };
   }
 
   /** レンダリング */
   public render(): React.ReactElement<ISearchResultsProps> {
     return (
-      <div>{this.state.query}</div>
+      <div className={styles.sarchResults} >
+        {
+          this.props.results.map((result, i) => {
+            return <CardLayout {...result} tagClicked={this.props.tagClicked} key={`cardLayout-${i}`} />;
+          })
+        }
+      </div>
     );
   }
 }

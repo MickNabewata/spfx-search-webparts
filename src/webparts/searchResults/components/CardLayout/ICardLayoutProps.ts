@@ -1,13 +1,5 @@
-/** 検索結果Webパーツプロパティ */
-export interface ISearchResultsProps {
-  /** 検索結果 */
-  results : ISearchResult[];
-  /** タグクリックコールバック */
-  tagClicked : (tag : string) => void;
-}
-
-/** 検索結果 */
-export interface ISearchResult {
+/** カード表示コンポーネントプロパティ */
+export interface ICardLayoutProps {
 
   /** タイトル */
   title : string;
@@ -35,4 +27,7 @@ export interface ISearchResult {
 
   /** タイムスタンプ */
   timeStamp : string;
+
+  /** タグクリックコールバック */
+  tagClicked : (tag : string) => void;
 }

@@ -1,0 +1,66 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import '~office-ui-fabric-react/dist/sass/_References.scss';
+
+// Webパーツ全体
+.cardLayout {
+
+  float: left;
+  margin: 5px;
+  width: calc((100% / 3) - 10px);
+
+  // タグ領域
+  .tagArea {
+    padding: 8px 16px;
+    overflow: hidden;
+    height: 31px;
+  }
+
+  // タグ
+  .tag {
+    margin-right: 8px;
+    float: left;
+    font-size: smaller;
+  }
+
+  // タイトル領域
+  .titleArea {
+    clear: both;
+  }
+
+  // タイトルリンク
+  .titleLink {
+    text-decoration: none;
+  }
+
+  // タイトル
+  .title {
+    text-decoration: none;
+    font-size: unset;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: auto !important;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  // 詳細領域
+  .bodyArea {
+    padding: 8px 16px;
+    font-size: x-small;
+    height: 90px;
+
+    word-break : break-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    overflow: hidden;
+  }
+
+  // フッター領域
+  .footerArea {
+    height : auto;
+  }
+
+}

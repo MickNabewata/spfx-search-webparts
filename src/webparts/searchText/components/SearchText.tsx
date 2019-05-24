@@ -13,27 +13,16 @@ export default class SearchText extends React.Component<ISearchTextProps, ISearc
   {
     super(props);
 
-    let query = new queryUtil().get().hashes['query'];
-
+    // ステート初期化
     this.state = {
-      query : (query)? query : ''
+      queryText : props.initialQuery
     };
   }
 
   /** 検索イベント */
   private onSearch = (value : any)=> {
-    let util = new queryUtil().get();
-
-    if(value)
-    {
-      util = util.addHashes({query : value});
-    }
-    else
-    {
-      util = util.removehashKey('query').addHashes({query : ''});
-    }
-
-    window.location.href = util.createFullUrl();
+    // クエリ変更時コールバック
+    this.props.onQueryChanged(value);
   }
 
   /** 描画 */
@@ -42,7 +31,7 @@ export default class SearchText extends React.Component<ISearchTextProps, ISearc
       <SearchBox
         placeholder='検索'
         onSearch={this.onSearch}
-        value={this.state.query}
+        value={this.state.queryText}
         />
     );
   }

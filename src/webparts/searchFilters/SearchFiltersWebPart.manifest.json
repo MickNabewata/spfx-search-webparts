@@ -9,6 +9,8 @@
   "requiresCustomScript": false,
   "supportedHosts": ["SharePointWebPart"],
 
+  "supportsThemeVariants": true,
+
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f71",
     "group": { "default": "検索" },
