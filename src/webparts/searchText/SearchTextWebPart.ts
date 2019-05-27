@@ -2,16 +2,11 @@ import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
-import {
-  IPropertyPaneConfiguration,
-  PropertyPaneTextField
-} from '@microsoft/sp-property-pane';
+import { IPropertyPaneConfiguration, PropertyPaneTextField } from '@microsoft/sp-property-pane';
 import { ThemeProvider, ThemeChangedEventArgs, IReadonlyTheme } from '@microsoft/sp-component-base';
-
 import * as strings from 'SearchTextWebPartStrings';
 import SearchText from './components/SearchText';
 import { ISearchTextProps } from './components/ISearchTextProps';
-
 import queryUtil from '../../util/queryUtil';
 import SearchQuery, { propertyId } from '../../dynamicData/searchQuery';
 
