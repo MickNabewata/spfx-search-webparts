@@ -23,6 +23,7 @@ export default class SearchResultsWebPart extends BaseClientSideWebPart<ISearchR
 
   /** レンダリング */
   public render(): void {
+    
     // 動的データ取得
     let queryText : string = (this.properties.searchQuery)? this.properties.searchQuery.tryGetValue() : undefined;
     let searchResults : ISearchResult[] = [];
@@ -59,7 +60,7 @@ export default class SearchResultsWebPart extends BaseClientSideWebPart<ISearchR
         url : `https://www.google.co.jp/search?q=big`,
         toolTip : `ツールチップbig`,
         body : '大きいよ',
-        userAccount : `watanabemi@techdev.onmicrosoft.com`,
+        userAccount : `admin@nabewata365.onmicrosoft.com`,
         timeStamp : new Date(2019, 2, 1, 10, 20, 30, 40).toString()
       }
     );
@@ -73,7 +74,7 @@ export default class SearchResultsWebPart extends BaseClientSideWebPart<ISearchR
         url : `https://www.google.co.jp/search?q=big`,
         toolTip : `ツールチップbig`,
         body : '小さいよ',
-        userAccount : `watanabemi@techdev.onmicrosoft.com`,
+        userAccount : `admin@nabewata365.onmicrosoft.com`,
         timeStamp : new Date(2019, 2, 1, 10, 20, 30, 40).toString()
       }
     );
@@ -89,7 +90,7 @@ export default class SearchResultsWebPart extends BaseClientSideWebPart<ISearchR
         url : `https://www.notexists.com/`,
         toolTip : `存在しないよ`,
         body : '存在しません。',
-        userAccount : `notexists@techdev.onmicrosoft.com`,
+        userAccount : `notexists@nabewata365.onmicrosoft.com`,
         timeStamp : new Date(2019, 2, 1, 10, 20, 30, 40).toString()
       }
     );
@@ -169,7 +170,7 @@ export default class SearchResultsWebPart extends BaseClientSideWebPart<ISearchR
       url : `https://www.google.co.jp/search?q=${num}`,
       toolTip : `ツールチップ${num}`,
       body : `本文${num}　aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよわをんあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよわをんあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよわをんあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよわをんあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよわをんあいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよわをん`,
-      userAccount : `watanabemi@techdev.onmicrosoft.com`,
+      userAccount : `admin@nabewata365.onmicrosoft.com`,
       timeStamp : new Date(2019, 2, 1 + num, 10, 20, 30, 40).toString()
     };
   }

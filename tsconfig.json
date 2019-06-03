@@ -23,6 +23,7 @@
       "webpack-env"
     ],
     "lib": [
+      "es6",
       "es2015",
       "es5",
       "dom",

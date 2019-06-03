@@ -41,28 +41,6 @@ export default class SearchResults extends React.Component<ICardLayoutProps, ISe
   }
 
   /** タグ一覧の描画 */
-  private renderTags2(props : ICardLayoutProps) : JSX.Element {
-    return (
-      <React.Fragment>
-        {
-          (props.tags)?
-            props.tags.map((tag, i) => {
-              return (
-                <DocumentCardLocation
-                  location={tag}
-                  onClick={this.tagClicked(tag)}
-                  className={styles.tag}
-                  key={`tag-${i}`}
-                />
-              );
-            })
-          : null
-        }
-      </React.Fragment>
-    );
-  }
-
-  /** タグ一覧の描画 */
   private renderTags(props : ICardLayoutProps) : JSX.Element {
     return (
       <React.Fragment>
@@ -89,7 +67,7 @@ export default class SearchResults extends React.Component<ICardLayoutProps, ISe
   /** レンダリング */
   public render(): React.ReactElement<ICardLayoutProps> {
     return (
-      <DocumentCard className={styles.cardLayout} >
+      <DocumentCard className={`${styles.cardLayout}`} >
         <a href={this.props.url} title={this.props.toolTip} >
           <DocumentCardPreview previewImages={this.getPreviewImages(this.props)}/>
         </a>

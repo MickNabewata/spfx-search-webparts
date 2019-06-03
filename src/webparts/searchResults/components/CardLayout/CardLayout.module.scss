@@ -4,9 +4,8 @@
 // Webパーツ全体
 .cardLayout {
 
-  float: left;
-  margin: 5px;
-  width: calc((100% / 3) - 10px);
+  width: 100%;
+  min-width: 100%;
 
   // タグ領域
   .tagArea {
